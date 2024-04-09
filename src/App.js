@@ -1,13 +1,7 @@
-import Banner from "./componentes/Banner";
-import Formulario from "./componentes/Formulario";
+import Rotas from "./routes";
 
 function App() {
-  return (
-    <div className="App">
-      <Banner />
-      <Formulario />
-    </div>
-  );
+  return <Rotas />;
 }
 
 export default App;
