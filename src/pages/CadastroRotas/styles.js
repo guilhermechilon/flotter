@@ -7,18 +7,11 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-export const Imagem = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-bottom: 2%;
-  margin-left: 25%;
-`;
-
 export const Title = styled.h1`
   font-size: 35px;
-  margin: 2% 15% 0 15%;
+  max-width: 1260px;
+  padding: 0 80px;
+  margin: 5px auto;
 `;
 export const Subtitle = styled.span`
   margin-bottom: 20px;
@@ -32,11 +25,17 @@ export const Subtitle = styled.span`
 export const Form = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 0 2%;
+  grid-column-gap: 250px;
   grid-row-gap: 25px;
-  margin-left: 15%;
-  margin-right: 15%;
+  max-width: 1260px;
+  padding: 0 80px;
+  margin: 0 auto;
   margin-top: 30px;
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const InputWrapper = styled.div`
