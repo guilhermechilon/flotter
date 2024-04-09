@@ -25,23 +25,23 @@ function RegistroMaquina() {
         </Subtitle>
         <Form>
           <InputWrapper>
-            <FaUserCircle size={30} />
+            <FaUserCircle size={20} />
             <InputField placeholder="Destino" />
           </InputWrapper>
           <InputWrapper>
-            <FaCalendarAlt size={30} />
+            <FaCalendarAlt size={20} />
             <InputField placeholder="Horário de Saída" />
           </InputWrapper>
           <InputWrapper>
-            <IoLocationSharp size={30} />
+            <IoLocationSharp size={20} />
             <InputField placeholder="Origem" />
           </InputWrapper>
           <InputWrapper>
-            <FaIdCard size={30} />
+            <FaIdCard size={20} />
             <InputField placeholder="Placa do veículo" />
           </InputWrapper>
           <InputWrapper>
-            <MdOutlineSpeed size={30} />
+            <MdOutlineSpeed size={20} />
             <InputField placeholder="Quilometragem" />
           </InputWrapper>
           <DefaultButton

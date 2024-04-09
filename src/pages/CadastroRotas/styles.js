@@ -49,7 +49,7 @@ export const InputWrapper = styled.div`
   width: 350px;
   height: 45px;
   svg {
-    padding: 5px;
+    margin: 0 5px;
   }
 `;
 
