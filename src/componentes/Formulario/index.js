@@ -1,7 +1,9 @@
-
 import CampoTexto from '../CampoTexto';
+import { BotaoLogin, BotaoCadastro } from '../CampoTexto/style';
 import './Formulario.css';
 
+/*const Lista=[Email, Senha, cnh]
+*/
 const Formulario = () => {
     return (
         <section className="formulario">
@@ -10,7 +12,8 @@ const Formulario = () => {
                 <CampoTexto placeholder="******************" className="senha"/>
                 <CampoTexto placeholder="******************" className="senha"/>
                 <CampoTexto placeholder="CNH" className="CNH"/>
-                <button className='button'>Cadastrar</button>
+                <BotaoCadastro>Cadastrar</BotaoCadastro>
+                <BotaoLogin>Tela de Login</BotaoLogin>
             </form>
         </section>
     )
