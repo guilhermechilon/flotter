@@ -21,3 +21,36 @@ export const BotaoLogin = styled.button`
     float: left;
     border: 0px;
 `;
+
+export const BotaoProximo = styled.button`
+    background-color: #df8e03;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 15px 30px;
+    float: left;
+    border: 0px;
+`;
+
+export const BotaoVoltar = styled.button`
+    background-color: #df8e03;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 15px 30px;
+    float: left;
+    border: 0px;
+`;
+
+export const BotaoAceitar = styled.button`
+    background-color: #df8e03;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 15px 30px;
+    float: left;
+    border: 0px;
+`;

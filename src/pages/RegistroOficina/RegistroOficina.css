@@ -1,0 +1,44 @@
+/* RegistroOficina.css */
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.timeline-item {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.timeline-item.active {
+  background-color: #007bff;
+  color: white;
+}
+
+h1 {
+  text-align: left;
+}
+
+h2 {
+  text-align: left;
+  color: #787977;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+
+
+/*export const CadOficina = styled.form`
+  color: black;
+`;
+*/
