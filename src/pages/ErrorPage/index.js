@@ -9,6 +9,7 @@ function ErrorPage() {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
+          padding: "40px",
         }}
       >
         Página não encontrada
@@ -21,6 +22,8 @@ function ErrorPage() {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
+          textDecoration: "underline",
+          color: "#0000EE",
         }}
       >
         Voltar para o início
