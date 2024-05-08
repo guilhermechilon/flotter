@@ -1,54 +1,26 @@
 HTML NAV BAR:
 
 <body>
-    <div class="container">
-        <div class="navbar">
-            <div class="logo"><a href = "#"></a><img src="imagens/logo.png"></div>
-            <ul class="links">
-                    <li><a href="sobre">Sobre nós</a></li>
-                    <li><a href="rota">Cadastro de rota</a></li>
-                    <li><a href="ordem">Ordem de serviço</a></li>
-                    <li><a href="maquina">Cadastro de máquina</a></li>
-                    <li><a href="oficina">Cadastro de oficina</a></li>
-
-                </ul>
-                <a href="#" class="action">Minha Conta</a>
-                <div class="togglebtn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            
-        </div>
-
-        <div class="dropdown_menu">
-            <li><a href="sobre">Sobre nós</a></li>
-            <li><a href="rota">Cadastro de rota</a></li>
-            <li><a href="ordem">Ordem de serviço</a></li>
-            <li><a href="maquina">Cadastro de máquina</a></li>
-            <li><a href="oficina">Cadastro de oficina</a></li>
-            <li><a href="#" class="action">Minha Conta</a></li>
-
-        </div>
-
-        <main>
-            <section id="hero">
-                <h1>Sua frota mais segura</h1>
-                <p>Lorem ipsum dolor sit amet. Et esse reiciendis ex commodi officia rem voluptates rerum aut ratione sunt ut numquam magnam.<br/> Quo tempora totam id rerum iure sit sint nesciunt et sunt necessitatibus qui incidunt tenetur ut rerum nihil hic accusantium dolorem.<br/> Non earum expedita ex debitis fugit in accusantium velit ad nihil nobis qui sapiente voluptate aut cumque facere non adipisci fuga. <br/>Vel ullam aperiam ut quod assumenda et repellendus sunt est similique odit est atque omnis vel enim beatae.</p>
-            </section>
-        </main>-->
-
-        <script>
-            const toggleBtn = document.querySelector('.togglebtn')
-            const toggleBtnIcon = document.querySelector('.togglebtn i')
-            const dropDownMenu = document.querySelector('.dropdown_menu')
-
-            toggleBtn.onclick = function () {
-                dropDownMenu.classList.toggle('open')
-                const isOpen = dropDownMenu.classList.contains('open')
-
-                toggleBtnIcon.classList = isOpen
-                ? 'fa-solid fa-xmark'
-                : 'fa-solid fa-bars'
-            }
-        </script>
-    </div> 
+    <header class="header">
+        <nav class="nav">
+        <div class="logo"><a href = "#"></a><img src="imagens/logo.png"></div>
+          <button class="hamburger"></button>
+          <ul class="nav-list">
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Cadastro de rota</a></li>
+            <li><a href="#">Ordem de serviço</a></li>
+            <li><a href="#">Cadastro de máquina</a></li>
+            <li><a href="#">Cadastro de oficina</a></li>
+            <li><a href="conta">Minha Conta</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="hero">
+            <h1>SUA FROTA MAIS SEGURA</h1>
+            <p>Lorem ipsum dolor sit amet. Et esse reiciendis ex commodi officia rem voluptates rerum aut ratione sunt ut numquam magnam.<br/> Quo tempora totam id rerum iure sit sint nesciunt et sunt necessitatibus qui incidunt tenetur ut rerum nihil hic accusantium dolorem.<br/> Non earum expedita ex debitis fugit in accusantium velit ad nihil nobis qui sapiente voluptate aut cumque facere non adipisci fuga. <br/>Vel ullam aperiam ut quod assumenda et repellendus sunt est similique odit est atque omnis vel enim beatae.</p>
+        </section>
+    </main>
+    </header>
+      <main class="hero"></main>
 </body>
