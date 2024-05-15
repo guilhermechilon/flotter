@@ -14,3 +14,22 @@
 .css-10gei56 {
   height: 45px;
 }
+.css-1tbggly {
+  height: 60px !important;
+}
+.AddNewVeic {
+  background-color: #1976d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  padding: 9px 18px;
+  margin: 0 5px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  svg {
+    margin-right: 5px;
+  }
+}
