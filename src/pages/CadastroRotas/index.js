@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   InputField,
   InputWrapper,
@@ -7,16 +7,60 @@ import {
   Wrapper,
   Form,
   DefaultButton,
+  ModalPopUp,
+  ModalMargin,
 } from "./styles";
 import { FaUserCircle } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { MdOutlineSpeed } from "react-icons/md";
 import { FaIdCard } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function RegistroMaquina() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleBack = () => {
+    // Adicione a lógica para o botão OK aqui
+    console.log("OK clicked");
+    closeModal();
+  };
+
+  const handleDetail = () => {
+    // Adicione a lógica para o botão Detalhar Rota aqui
+    closeModal();
+    navigate("/tabelateste");
+  };
   return (
     <>
+      {isModalOpen && (
+        <ModalPopUp>
+          <div>
+            <ModalMargin>
+              <div className="modal-content">
+                <h2>ROTA CADASTRADA COM SUCESSO</h2>
+              </div>
+            </ModalMargin>
+            <div className="buttons">
+              <button className="back-button" onClick={handleBack}>
+                Voltar
+              </button>
+              <button className="detail-button" onClick={handleDetail}>
+                Detalhar Rota
+              </button>
+            </div>
+          </div>
+        </ModalPopUp>
+      )}
       <Wrapper>
         <Title>CADASTRO DE ROTA</Title>
         <Subtitle>
@@ -46,7 +90,7 @@ function RegistroMaquina() {
           <DefaultButton
             primaryColor
             width={"350px"}
-            onClick={() => alert("Vai ter um pop-up aqui um dia")}
+            onClick={() => setIsModalOpen(true)}
           >
             Cadastrar Rota
           </DefaultButton>

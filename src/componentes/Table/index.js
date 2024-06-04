@@ -14,58 +14,7 @@ import {
 } from "@mui/material";
 import "./style.css";
 import { IoMdAddCircleOutline } from "react-icons/io";
-
-const data = [
-  {
-    plate: "123457345",
-    model: "Modelo do Carro1251",
-    type: "Tipo do Carro5213",
-    maintenance: "NÃO",
-    driver: "Nome do Motorista6993",
-  },
-  {
-    plate: "241347693",
-    model: "Modelo do Carro4372",
-    type: "Tipo do Carro7123",
-    maintenance: "SIM",
-    driver: "Nome do Motorista1241",
-  },
-  {
-    plate: "856856931",
-    model: "Modelo do Carro7652",
-    type: "Tipo do Carro3458",
-    maintenance: "SIM",
-    driver: "Nome do Motorista7689",
-  },
-  {
-    plate: "745846243",
-    model: "Modelo do Carro235",
-    type: "Tipo do Carro5321",
-    maintenance: "NÃO",
-    driver: "Nome do Motorista6332",
-  },
-  {
-    plate: "523738645",
-    model: "Modelo do Carro4642",
-    type: "Tipo do Carro8973",
-    maintenance: "NÃO",
-    driver: "Nome do Motorista4322",
-  },
-  {
-    plate: "151743786",
-    model: "Modelo do Carro8762",
-    type: "Tipo do Carro6424",
-    maintenance: "SIM",
-    driver: "Nome do Motorista3161",
-  },
-  {
-    plate: "12415abc5",
-    model: "Modelo do Carro ABCE",
-    type: "Tipo do Carro 123AF",
-    maintenance: "NÃO",
-    driver: "Nome do Motorista3213",
-  },
-];
+import { useState } from "react";
 
 const Table = () => {
   const columns = [
@@ -96,6 +45,64 @@ const Table = () => {
     },
   ];
 
+  const [data, setData] = useState([
+    {
+      plate: "123457345",
+      model: "Modelo do Carro1251",
+      type: "Tipo do Carro5213",
+      maintenance: "NÃO",
+      driver: "Nome do Motorista6993",
+    },
+    {
+      plate: "241347693",
+      model: "Modelo do Carro4372",
+      type: "Tipo do Carro7123",
+      maintenance: "SIM",
+      driver: "Nome do Motorista1241",
+    },
+    {
+      plate: "856856931",
+      model: "Modelo do Carro7652",
+      type: "Tipo do Carro3458",
+      maintenance: "SIM",
+      driver: "Nome do Motorista7689",
+    },
+    {
+      plate: "745846243",
+      model: "Modelo do Carro235",
+      type: "Tipo do Carro5321",
+      maintenance: "NÃO",
+      driver: "Nome do Motorista6332",
+    },
+    {
+      plate: "523738645",
+      model: "Modelo do Carro4642",
+      type: "Tipo do Carro8973",
+      maintenance: "NÃO",
+      driver: "Nome do Motorista4322",
+    },
+    {
+      plate: "151743786",
+      model: "Modelo do Carro8762",
+      type: "Tipo do Carro6424",
+      maintenance: "SIM",
+      driver: "Nome do Motorista3161",
+    },
+    {
+      plate: "12415abc5",
+      model: "Modelo do Carro ABCE",
+      type: "Tipo do Carro 123AF",
+      maintenance: "NÃO",
+      driver: "Nome do Motorista3213",
+    },
+  ]);
+  const handleDeleteRows = (event, rowData) => {
+    let _data = [...data];
+    rowData.forEach((rd) => {
+      _data = _data.filter((t) => t.tableData.id !== rd.tableData.id);
+    });
+    setData(_data);
+  };
   const table = useMaterialReactTable({
     columns,
     data,
@@ -200,6 +207,7 @@ const Table = () => {
     createDisplayMode: "modal",
     initialState: { showColumnFilters: true, showGlobalFilter: true },
     onCreatingRowSave: ({ table, values }) => {
+      setData((data) => [...data, values]);
       table.setCreatingRow(null);
     },
     onCreatingRowCancel: () => {},
@@ -242,7 +250,7 @@ const Table = () => {
   return (
     <ThemeProvider theme={createTheme({ typography: { fontSize: 19 } })}>
       {/* Só diminuir o maxWidth pra mudar o tamanho da tabela*/}
-      <div style={{ maxWidth: "10000px", padding: "0px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "100%", padding: "0px", margin: "0 auto" }}>
         <MaterialReactTable columns={columns} table={table} />
       </div>
     </ThemeProvider>
