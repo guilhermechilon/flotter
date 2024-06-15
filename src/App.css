@@ -1,0 +1,136 @@
+.titulo a{
+  font-size: 3vw;
+}
+
+.App h1{
+  font-size: 3vw;
+  margin: 0px;
+}
+
+.App img{
+  height: 3vw;
+}
+
+.caixas input{
+  height: 3vw;
+  width: 20vw;
+  font-size: 3vw;
+  border: none;
+  outline: none;
+}
+
+.caixas2 input{
+  height: 3vw;
+  width: 93.5vw;
+  font-size: 3vw;
+  border: none;
+  outline: none;
+}
+
+.caixas {display: flex;
+  height: 3.8vw;
+}
+
+.nome {
+  display: flex;
+  border: 0.3vw solid black;
+  margin-left: 3vw;
+}
+
+.fabricacao {
+  display: flex;
+  border: 0.3vw solid black;
+  margin-left: 10vw;
+}
+
+.km {
+  display: flex;
+  border: 0.3vw solid black;
+  margin-left: 10vw;
+}
+
+.caixas2 {
+  display: flex;
+  height: 4vw;
+}
+
+.aquisicao {
+  display: flex;
+  border: 0.3vw solid black;
+  margin-left: 10vw;
+}
+
+.placa {
+  display: flex;
+  border: 0.3vw solid black;
+  margin-left: 3vw;
+}
+
+.origem {
+  display: flex;
+  border: 0.3vw solid black;
+  margin-left: 10vw;
+}
+
+.subtitulo{
+  display: flex;
+  font-size: 2vw;
+}
+
+.subtitulo1 {
+  margin-left: 3vw;
+}
+
+.subtitulo2 {
+  margin-left: 14.5vw;
+}
+
+.subtitulo3 {
+  margin-left: 15.5vw;
+}
+
+.subtitulo4 {
+  margin-left: 3vw;
+}
+
+.subtitulo5 {
+  margin-left: 29.8vw;
+}
+
+.subtitulo6 {
+  margin-left: 28.4vw;
+}
+
+.subtitulo7 {
+  margin-left: 3vw;
+}
+
+.subtitulo8 {
+  margin-left: 30.5vw;
+}
+
+.subtitulo9 {
+  margin-left: 29.3vw;
+}
+
+.botao1 {
+  background-color: #f69c5e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2vw;
+  margin-left:39vw;
+}
+
+.botao2 {
+  background-color: #f69c5e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2vw;
+  margin-left: 5vw;
+}
