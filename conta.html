@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flotter</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-image:linear-gradient(rgba(14, 38, 43, 0.7), hsla(36, 89%, 38%, 0.5)),url(imagens/fundoconta.jpg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    position: relative; 
+  }
+
+  .container .titulo{
+    text-align: center;
+  }
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    scale: 50%;
+  }
+
+  .back-button {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; 
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: block;
+    margin: 10px auto;
+    line-height: 100px;
+    text-align: center;
+    font-size: 50px;
+    color: #ccc;
+  }
+</style>
+</head>
+<body>
+    <button class="back-button" onclick="history.back()">←</button>
+    <div class="logo">
+        <img src="imagens/logo.png" alt="Flotter Logo">
+      </div>
+    <div class="container">
+        <div class="titulo">
+            <h2>Minha conta</h2>
+        </div>
+        <input type="text" class="input-field" placeholder="Nome">
+        <input type="email" class="input-field" placeholder="E-mail">
+        <input type="text" class="input-field" placeholder="CNPJ">
+    </div>
+</body>
+</html>

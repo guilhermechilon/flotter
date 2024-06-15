@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+
+  .container{
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(14, 38, 43, 0.7), hsla(36, 89%, 38%, 0.7)),url(https://images.unsplash.com/photo-1486673748761-a8d18475c757?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D;);
+    background-position: center ;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0rem;
+}
+  
+  .header {
+    background-color: orange;
+    padding-inline: 16px;
+  }
+  
+  .nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img{
+    width: 45%;
+    margin-top: 8px;
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 90px;
+    margin-left: -50px;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .nav-list a {
+    font-size: 15px;
+    color: #fff;
+    font-weight: bolder;
+    padding-block: 16px;
+  }
+
+  .nav-list conta{
+    display: flex;
+    margin-right: 90px;
+    margin-left: -50px;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .hero {
+    height: calc(100vh - 70px);
+  }
+
+  #hero {
+    height: calc(70vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+#hero h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+  
+  .hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  .image-block {
+    display: inline-block;
+    margin: 50px;
+    margin-top: -70px;
+    margin-left: 200px;
+    border-radius: 4px;
+}
+
+.image-block img {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-block img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=30);
+}
+
+.image-block title{
+  font-size: 36px;
+}
+
+  
+  @media (max-width: 750px) {
+    .hamburger {
+      display: block;
+      z-index: 1;
+    }
+  
+    .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 120vw;
+      height: 100vh;
+      background-color: orange;
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+      backdrop-filter: blur(15px);
+      overflow: hidden;
+  
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+  
+      pointer-events: none;
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.4s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.6s;
+    }
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburger {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+
+    .image-block {
+      display: flexbox;
+      margin: 10px;
+      margin-left: 40px;
+      margin-top: -60px;
+      border-radius: 4px;
+  }
+  
+  .image-block img {
+      width: 45%;
+      height: auto;
+      border-radius: 10px;
+  }
+
+  .image-block img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=30);
+  }
+  
+  }
