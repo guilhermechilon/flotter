@@ -141,7 +141,7 @@ export default function PaginaRotas() {
               >
                 <RouteTitle>Quilometros:</RouteTitle>
                 <InputRoutes>
-                  <HiOutlineTruck size={25} />
+                  <MdOutlineSpeed size={25} />
                   <InputField
                     type="number"
                     maxlength="40"
@@ -162,7 +162,7 @@ export default function PaginaRotas() {
               >
                 <RouteTitle>Status:</RouteTitle>
                 <InputRoutes>
-                  <MdOutlineSpeed size={25} />
+                  <HiOutlineTruck size={25} />
                   <InputField
                     type="text"
                     maxlength="40"
