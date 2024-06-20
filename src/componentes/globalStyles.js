@@ -159,7 +159,6 @@ const reset = css`
   input[type="button"],
   input[type="reset"],
   input[type="submit"] {
-    -webkit-appearance: button;
     cursor: pointer;
   }
 
@@ -217,5 +216,7 @@ export default createGlobalStyle`
   html, body {
     height: 100%;
   }
-
+  ::ng-deep.agm-style div {
+border:0px !important
+}
 `;

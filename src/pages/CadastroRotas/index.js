@@ -15,15 +15,11 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { MdOutlineSpeed } from "react-icons/md";
 import { FaIdCard } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function RegistroMaquina() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
 
   const closeModal = () => {
     setIsModalOpen(false);
